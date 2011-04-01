@@ -3,14 +3,13 @@ DataWarehouse
 
 This is incomplete. I'm using it in a production app, but I wouldn't say it's ready to be used by anybody else.
 
-
 TODO
 =======
 
 - Clean up the DB hook stuff.
 - Any models in parent_models use the parent DB
 - Any models in models use the child DB
-- Migrations
+- Bring in subproject's bundle gems, and any plugins it relies on
 
 Credits
 =======

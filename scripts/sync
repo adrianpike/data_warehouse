@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# hat tip to my homie @amiel
+
 TMPDIR=/tmp
 RSYNC_OPTS="-r --exclude=\".git/\" $RSYNC_OPTS"
 

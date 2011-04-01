@@ -24,6 +24,8 @@ class DataWarehouse
   def self.sync
     load_config!
     
+    # TODO: Chmod sync script
+    
     Kernel.exec({
           'PROJ' => @@config['project'],
           'GIT_URL' => @@config['repo'],
@@ -32,7 +34,7 @@ class DataWarehouse
           'FROM_LIB' => "",
           'JAVASCRIPTS' => "",
           'STYLESHEETS' => "",
-          'RSYNC_OPTS' => config['ignore_paths'].collect{|p| '--exclude="' + p + '"' }.join(' ')
+          'RSYNC_OPTS' => @@config['ignore_paths'].collect{|p| '--exclude="' + p + '"' }.join(' ')
           },File.dirname(__FILE__) + '/../scripts/sync')
         
   end
